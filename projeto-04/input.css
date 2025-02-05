@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-100 text-black dark:bg-gray-900 dark:text-white;
+  }
+
+  h1,
+  h2,
+  h3,
+  p {
+    @apply m-0;
+  }
+
+  img {
+    @apply max-w-full block;
+  }
+
+  a {
+    @apply no-underline;
+  }
+
+  ul {
+    @apply list-none p-0 m-0;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition;
+  }
+
+  .card {
+    @apply bg-white dark:bg-gray-800 shadow-md rounded-lg p-6;
+  }
+
+  .nav-link {
+    @apply text-black dark:text-white uppercase px-4 py-2 hover:text-primary;
+  }
+
+  .vantagens-item {
+    @apply flex items-center gap-4 p-4 border-l-4 border-transparent hover:border-primary transition;
+  }
+
+  .subtitulo {
+    @apply text-4xl font-bold uppercase text-subtitle text-center md:text-right bg-no-repeat bg-bottom-right bg-contain-custom pb-4;
+  }
+
+  .barra-decorativa::before {
+    content: "";
+    @apply w-16 h-1 bg-primary absolute top-2 right-[-30px];
+  }
+}
+
+@layer utilities {
+  .background-wave-light {
+    @apply bg-onda-clara bg-repeat-y bg-center bg-auto;
+  }
+
+  .background-wave-dark {
+    @apply bg-onda-escura bg-repeat-y bg-center bg-auto min-h-[200px];
+  }
+}
